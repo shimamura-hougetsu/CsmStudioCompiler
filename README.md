@@ -48,4 +48,4 @@ The project was developed using Visual Studio 2019 with .NET Framework 4.5.1. Yo
 
 ## License and Copyright Notice
 
-This project is a command line interface to, links to, and includes parts of code from [CsmStudio](https://github.com/subelf/CsmStudio), therefore it's released under GPLv3. To make the release usable, unmodified compiled libraries from [CsmStudio](https://github.com/subelf/CsmStudio) and [Sgg2Pgs](https://github.com/subelf/Spp2Pgs) are included. For more information about the original projects and the author please visit the link to the repo.
+This project is a command line interface to, links to, and includes parts of code from [CsmStudio](https://github.com/subelf/CsmStudio), therefore it's released under GPLv3. To make the release usable, unmodified compiled libraries from [CsmStudio](https://github.com/subelf/CsmStudio) and [Spp2Pgs](https://github.com/subelf/Spp2Pgs) are included. For more information about the original projects and the author please visit the link to the repo.
