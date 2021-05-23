@@ -48,4 +48,6 @@ The project was developed using Visual Studio 2019 with .NET Framework 4.5.1. Yo
 
 ## License and Copyright Notice
 
-This project is a command line interface to, links to, and includes parts of code from [CsmStudio](https://github.com/subelf/CsmStudio), therefore it's released under GPLv3. To make the release usable, unmodified compiled libraries from [CsmStudio](https://github.com/subelf/CsmStudio) and [Spp2Pgs](https://github.com/subelf/Spp2Pgs) are included. For more information about the original projects and the author please visit the link to the repo.
+This project is a command line interface to, links to, and includes parts of code from [CsmStudio](https://github.com/subelf/CsmStudio), therefore it's released under GPLv3. To make the release usable, compiled libraries from [CsmStudio](https://github.com/subelf/CsmStudio) and [Spp2Pgs](https://github.com/subelf/Spp2Pgs) are included. The included `ProjectManager.dll` was compiled with [one modification at ProjectCompiler.cs#L477](https://github.com/subelf/CsmStudio/blob/8a0e5eac0b124cf24b6eeac764aeab1719b9e0e1/CsmStudio.ProjectManager/Compile/ProjectCompiler.cs#L477), the `false` was changed to `true` for full ass effects. Other binaries were not modified. For more information about the original projects and the author please visit the link to the repo.
+
+
