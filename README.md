@@ -37,8 +37,8 @@ The usage is as follows:
 
 ## Return Code
 
- - 0: Conversation completed successfully.
- - 1: Conversation failed because of an error, please refer to the Mux Server logs for details.
+ - 0: Conversion completed successfully.
+ - 1: Conversion failed because of an error, please refer to the Mux Server logs for details.
  - -1: Incorrect command line arguments.
  - -2: Invalid information is provided to some options, the reason will be printed.
 
