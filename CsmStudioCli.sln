@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsmStudioCli", "CsmStudioCli.csproj", "{D92AD79A-AB59-4514-82C3-299BCC25CD0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D92AD79A-AB59-4514-82C3-299BCC25CD0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D92AD79A-AB59-4514-82C3-299BCC25CD0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D92AD79A-AB59-4514-82C3-299BCC25CD0B}.Debug|x64.ActiveCfg = Debug|x64
+		{D92AD79A-AB59-4514-82C3-299BCC25CD0B}.Debug|x64.Build.0 = Debug|x64
+		{D92AD79A-AB59-4514-82C3-299BCC25CD0B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D92AD79A-AB59-4514-82C3-299BCC25CD0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D92AD79A-AB59-4514-82C3-299BCC25CD0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D92AD79A-AB59-4514-82C3-299BCC25CD0B}.Release|x64.ActiveCfg = Release|x64
+		{D92AD79A-AB59-4514-82C3-299BCC25CD0B}.Release|x64.Build.0 = Release|x64
+		{D92AD79A-AB59-4514-82C3-299BCC25CD0B}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {290E91D0-1B13-468A-B470-34EE74CC615F}
+	EndGlobalSection
+EndGlobal
