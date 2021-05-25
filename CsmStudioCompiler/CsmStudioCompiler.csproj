@@ -73,13 +73,13 @@
       <HintPath>..\packages\BluraySharp.0.3.7\lib\net40-client\BluraySharp.Entities.dll</HintPath>
     </Reference>
     <Reference Include="BluraySharp.Extension.Ssls">
-      <HintPath>..\..\CsmStudioCli\lib\BluraySharp.Extension.Ssls.dll</HintPath>
+      <HintPath>lib\BluraySharp.Extension.Ssls.dll</HintPath>
     </Reference>
     <Reference Include="CommandLine, Version=2.8.0.0, Culture=neutral, PublicKeyToken=5a870481e358d379, processorArchitecture=MSIL">
       <HintPath>..\packages\CommandLineParser.2.8.0\lib\net45\CommandLine.dll</HintPath>
     </Reference>
     <Reference Include="CsmStudio.ProjectManager">
-      <HintPath>..\..\CsmStudioCli\lib\CsmStudio.ProjectManager.dll</HintPath>
+      <HintPath>lib\CsmStudio.ProjectManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>

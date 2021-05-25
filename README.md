@@ -12,7 +12,7 @@ The usage is as follows:
 
   -l, --lang      Languages of subtitles
 
-  -o, --output    Output filename
+  -o, --output    Required. Output filename
 
   --outputClpi    Output filename of .clpi file if specified separately
 

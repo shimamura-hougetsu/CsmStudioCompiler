@@ -19,7 +19,7 @@ namespace CsmStudioCompiler
         [Option('l', "lang", HelpText = "Languages of subtitles")]
         public IEnumerable<string> SubtitleLangs { get; set; }
 
-        [Option('o', "outputM2ts", HelpText = "Output filename")]
+        [Option('o', "outputM2ts", Required = true, HelpText = "Output filename")]
         public string OutputM2ts { get; set; }
 
         [Option("outputClpi", Default = "", HelpText = "Output filename of .clpi file if specified separately")]
