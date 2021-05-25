@@ -22,7 +22,7 @@ namespace CsmStudioCompiler
         [Option('o', "outputM2ts", Required = true, HelpText = "Output filename")]
         public string OutputM2ts { get; set; }
 
-        [Option("outputClpi", Default = "", HelpText = "Output filename of .clpi file if specified separately")]
+        [Option("outputClpi", HelpText = "Output filename of .clpi file if specified separately")]
         public string OutputClpi { get; set; }
 
         [Option('f', "format", Default = "1080p", HelpText = "Video Format (1080p/1080i/720p/576p/576i/480p/480i)")]
@@ -197,7 +197,7 @@ namespace CsmStudioCompiler
             if (success)
             {
                 string clpiFileName = opts.OutputClpi;
-                if (clpiFileName.Equals(""))
+                if (clpiFileName == null)
                 {
                     clpiFileName = Path.Combine(Path.GetDirectoryName(opts.OutputM2ts), Path.GetFileNameWithoutExtension(opts.OutputM2ts) + ".clpi");
                 }
