@@ -9,9 +9,9 @@ using BluraySharp.Extension.Ssls;
 using CsmStudio.ProjectManager.Compile;
 using System.IO;
 
-namespace CsmStudioCli
+namespace CsmStudioCompiler
 {
-    public class Options
+    public class CompilingOptions
     {
         [Option('i', "input", Required = true, HelpText = "Paths to subtitle ass files")]
         public IEnumerable<string> SubtitleFiles { get; set; }
@@ -19,8 +19,11 @@ namespace CsmStudioCli
         [Option('l', "lang", HelpText = "Languages of subtitles")]
         public IEnumerable<string> SubtitleLangs { get; set; }
 
-        [Option('o', "output", HelpText = "Output filename")]
+        [Option('o', "outputM2ts", HelpText = "Output filename")]
         public string OutputM2ts { get; set; }
+
+        [Option("outputClpi", Default = "", HelpText = "Output filename of .clpi file if specified separately")]
+        public string OutputClpi { get; set; }
 
         [Option('f', "format", Default = "1080p", HelpText = "Video Format (1080p/1080i/720p/576p/576i/480p/480i)")]
         public string Format { get; set; }
@@ -61,16 +64,8 @@ namespace CsmStudioCli
         public void OnTaskEnd() { }
     }
 
-    class Program
+    public class CompilerInvoker
     {
-        static int Main(string[] args)
-        {
-            return CommandLine.Parser.Default.ParseArguments<Options>(args).MapResult(
-                opts => CompileProjectWithOptions(opts),
-                _ => -1
-                );
-        }
-
         static BdViFormat VideoFormatFromString(string fmt)
         {
             switch (fmt)
@@ -117,7 +112,7 @@ namespace CsmStudioCli
             }
         }
 
-        static int CompileProjectWithOptions(Options opts)
+        public static int CompileProjectWithOptions(CompilingOptions opts)
         {
             var SubtitleFilesList = opts.SubtitleFiles.ToList();
             var SubtitleLangsStringList = opts.SubtitleLangs.ToList();
@@ -201,13 +196,20 @@ namespace CsmStudioCli
             // copy the output files to destination if successful
             if (success)
             {
-                string destFileName = Path.Combine(Path.GetDirectoryName(opts.OutputM2ts), Path.GetFileNameWithoutExtension(opts.OutputM2ts) + ".clpi");
+                string clpiFileName = opts.OutputClpi;
+                if (clpiFileName.Equals(""))
+                {
+                    clpiFileName = Path.Combine(Path.GetDirectoryName(opts.OutputM2ts), Path.GetFileNameWithoutExtension(opts.OutputM2ts) + ".clpi");
+                }
+                Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(opts.OutputM2ts)));
+                Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(clpiFileName)));
                 File.Copy(Path.Combine(tOutputTempDir, "STREAM\\00000.m2ts"), opts.OutputM2ts, overwrite: true);
-                File.Copy(Path.Combine(tOutputTempDir, "CLIPINF\\00000.clpi"), destFileName, overwrite: true);
+                File.Copy(Path.Combine(tOutputTempDir, "CLIPINF\\00000.clpi"), clpiFileName, overwrite: true);
                 return 0;
             }
             else
             {
+                Console.Error.WriteLine($"ERROR: Muxing failed, please check logs from the Mux Server.");
                 return 1;
             }
         }

@@ -1,9 +1,9 @@
-# CsmStudioCli
+# CsmStudioCompiler
  Command Line Interface to CsmStudio, a program converts ass subtitles to OoM subtitles (clpi+m2ts).
  
 ## Usage
 
-Download the release executable, copy `MonteCarlo.External.MuxRemoting.dll` and `MuxCommon.DLL` into the same folder as `CsmStudioCli.exe`, then run it in CMD or PowerShell. The `BdMuxServer` is also required, you can copy it to the default location specified in the usage, or point it to your install location. Theese files are not included because they are parts of a commercial software.
+Download the release executable, copy `MonteCarlo.External.MuxRemoting.dll` and `MuxCommon.DLL` into the same folder as `CsmStudioCompilerCli.exe`, then run it in CMD or PowerShell. The `BdMuxServer` is also required, you can copy it to the default location specified in the usage, or point it to your install location. Theese files are not included because they are parts of a commercial software.
 
 The usage is as follows:
 
@@ -13,6 +13,8 @@ The usage is as follows:
   -l, --lang      Languages of subtitles
 
   -o, --output    Output filename
+
+  --outputClpi    Output filename of .clpi file if specified separately
 
   -f, --format    (Default: 1080p) Video Format (1080p/1080i/720p/576p/576i/480p/480i)
 
